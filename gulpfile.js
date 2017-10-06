@@ -4,6 +4,7 @@ var less = require('gulp-less');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+//var pump = require('pump');
 const shell = require('gulp-shell');
 var sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
@@ -173,23 +174,23 @@ gulp.task('index-PRODUCTION', function () {
 
 /* Task to watch less changes */
 gulp.task('watch-less', function() {
-    gulp.watch('./css/**/*.less', ['compile-less']);
+    gulp.watch('css/**/*.less', ['compile-less']);
 });
 /* Task to watch sass changes */
 gulp.task('watch-sass', function () {
-  gulp.watch('./css/**/*.scss', ['compile-sass']);
+  gulp.watch('css/**/*.scss', ['compile-sass']);
 });
 /* Task to watch js changes */
 gulp.task('watch-js', function() {
-    gulp.watch('./js/**/*.js', ['scripts']);
+    gulp.watch('js/**/*.js', ['scripts']);
 });
 /* Task to watch when a script is minified changes and produce a finalized minified JS */
 gulp.task('watch-concatScripts', function() {
-    gulp.watch('./temp_js/**/*.min.js', ['scripts']);
+    gulp.watch('temp_js/**/*.min.js', ['scripts']);
 });
 
 
-gulp.task('dev-watch', ['watch-less', 'watch-sass', 'compile-less', 'compile-sass', 'compress-images']); // you possibly don't want minified JS files on dev
+gulp.task('dev-watch', ['watch-less', 'watch-sass', 'compress-images']); // you possibly don't want minified JS files on dev
 gulp.task('dev-watch-all', ['watch-less', 'watch-sass', 'watch-js', 'compress-images']); // run this to watch for js changes as well, will produce minified JS file
 /*gulp.task('production', ['watch-less', 'watch-sass', 'watch-js', 'watch-concatScripts', 'compress-js', 'compile-less', 'compile-sass', 'compress-images', 'scripts', 'index-PRODUCTION']);*/
 
