@@ -13,7 +13,27 @@ Also contains command for optimization of scripts, styles and assets for product
 
 ## Commands
 
-* **create-template**: Creates a generic folder structure for small projects (`/css`, `js`, `libs`, `assets`, `fonts`, `index.html`)
+* **create-template**: Creates a generic folder structure for small projects (`/css`, `/js`, `/libs`, `/assets`, `/fonts`, `index.html`)
+
+```
+project (root)
+|
+|	gulpfile.js
+|	index.html
+|
+└─── assets
+└─── css
+└─── libs
+└─── js
+└─── fonts
+└─── release
+|	|
+|	|
+|	└─── assets
+|
+|
+```
+
 * **production-release**: 
 	* Concatenates and minifies all JS files from `/libs` and `/js`
 	* Compiles any (LESS, SASS files) minifies all CSS files
@@ -28,3 +48,5 @@ Also contains command for optimization of scripts, styles and assets for product
 * lodash.min.js included
 * Analytics script on index.html included
 * Jquery latest added
+* Requires Node version > 5.7 (recommended 6.10+)
+* Less/Sass files go to `css` folder and the watch will pick them up and compile them
