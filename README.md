@@ -1,4 +1,4 @@
-# WebTemplate
+# Web-Boilerplate
 
 A basic template for small projects, creates a basic `index.html` and creates a generic folder structure, the gulp script handles `watch` over `less`, `scss`, `js` files.
 
