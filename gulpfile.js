@@ -4,7 +4,6 @@ var less = require('gulp-less');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-var pump = require('pump');
 const shell = require('gulp-shell');
 var sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
