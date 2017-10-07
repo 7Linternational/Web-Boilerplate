@@ -50,3 +50,6 @@ project (root)
 * Jquery latest added
 * Requires Node version > 5.7 (recommended 6.10+)
 * Less/Sass files go to `css` folder and the watch will pick them up and compile them
+* Tested on 
+	* MacOS
+	* Windows 7, 10
